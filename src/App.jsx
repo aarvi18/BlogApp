@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { Header, Footer } from "./components/index";
 import { login, logout } from "./store/authSlice";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -27,7 +27,9 @@ const App = () => {
       <div className="w-full block">
         <Header />
         todo
-        <main>{/* <Outlet /> */}</main>
+        <main>
+          <Outlet />
+        </main>
         <Footer />
       </div>
     </div>
