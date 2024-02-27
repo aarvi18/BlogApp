@@ -1,5 +1,5 @@
 import React from "react";
-import { UseDispatch, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import authService from "../../appwrite/auth";
 import { logout } from "../../store/authSlice";
 
@@ -10,11 +10,7 @@ const LogoutBtn = () => {
       dispatch(logout());
     });
   };
-  return (
-    <button>
-        Lougout
-    </button>
-  )
+  return <button>Lougout</button>;
 };
 
 export default LogoutBtn;
